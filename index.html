@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Infiltrator Demo - Testing Server</title>
+    </head>
+    <body>
+        <header>
+        <h1>Infiltrators Demo <i>Testing Server</i></h1> <h3 class="enginever">  WebStealthEngineTesting    <b id="engineversion"></b></h3>
+        </header>
+
+          <div id="appModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+            <div class="modal-panel" role="document">
+                <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+                <header class="modal-header">
+                 <h2 class="modal-title" id="modalTitle"></h2>
+                </header>
+                <div class="modal-body" id="modalContent" tabindex="0"></div>
+                    <footer class="modal-footer" id="modalFooter"></footer>
+                </div>
+            </div>
+        
+        <main class="content">
+            <div class="col left">
+                <div class="infiltrator">
+                    <div class="infiltrator-header">
+                        <h2>Infiltrator: <b id="selectedinfiltrator" aria-live="polite"></b></h2>
+                        <button onclick="changeInfiltrator()">Change Infiltrator</button>
+                    </div>
+                    <div id="infiltratorstats" class="infiltrator-stats"></div>
+                </div>
+                <br><br>
+                <div class="loadout"><h2 style="text-align: left;">Loadout: <b id="loadout" class="loadout-list" aria-live="polite"></b>   <br><button onclick="openModal('loadout')">Change Loadout</button></h2>
+                    <p>All loadout items are free to bring. In this state of the demo you have access to every added item.</p>
+                 </div>
+            </div>
+
+            <div class="col right">
+                <h2>Demo Missions</h2>
+                <p>These missions will be avaliable in the full release, along with many more.</p>
+                <div id="missions" class="missions">
+                    <div class="tutorials">
+                        <button onclick="launchMission(breachingTutorial);">Breaching Tutorial</button>
+                    </div>
+                    <div class="kingstreet">
+                      <button onclick="openMission(kingStreet);">
+                         <img src="thumbnails/kingstreet.png" alt="King Street thumbnail">
+                        <br>
+                 </button>
+                </div>
+                </div>
+            </div>
+        </main>
+
+
+        <script src="engine.js"></script>
+    </body>
+</html>
